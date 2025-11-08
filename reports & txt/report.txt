@@ -1,0 +1,5 @@
+file output: sample.bin: ASCII text
+string output: This is a harmless test file
+sha256 hash: 64281dd7c1ce743fe039437a43472c2ea6716debdf4df7e3073a6800d9010ea7  sample.bin
+conclusion: The file is harmless (just a test sample).
+

